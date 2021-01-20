@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ec345ef8-1ff4-41d5-82d0-ad303c01d125}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database1</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Results.sql" />
+    <Build Include="dbo\Tables\Responses.sql" />
+    <Build Include="dbo\Tables\Requesters.sql" />
+    <Build Include="dbo\Tables\Positions.sql" />
+    <Build Include="dbo\Tables\Locations.sql" />
+    <Build Include="dbo\Tables\Interviews.sql" />
+    <Build Include="dbo\Tables\Contacts.sql" />
+    <Build Include="dbo\Tables\Companies.sql" />
+    <Build Include="dbo\Tables\ApplicationTypes.sql" />
+    <Build Include="dbo\Tables\Applications.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateResult.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateResponse.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateRequester.sql" />
+    <Build Include="dbo\Stored Procedures\UpdatePosition.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateLocation.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateInterview.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateContact.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateCompany.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateApplicationType.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateApplication.sql" />
+    <Build Include="dbo\Stored Procedures\GetResults.sql" />
+    <Build Include="dbo\Stored Procedures\GetResponses.sql" />
+    <Build Include="dbo\Stored Procedures\GetRequesters.sql" />
+    <Build Include="dbo\Stored Procedures\GetPositions.sql" />
+    <Build Include="dbo\Stored Procedures\GetLocations.sql" />
+    <Build Include="dbo\Stored Procedures\GetInterviews.sql" />
+    <Build Include="dbo\Stored Procedures\GetContacts.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanies.sql" />
+    <Build Include="dbo\Stored Procedures\GetApplicationTypes.sql" />
+    <Build Include="dbo\Stored Procedures\GetApplications.sql" />
+    <Build Include="dbo\Stored Procedures\GetApplication.sql" />
+    <Build Include="dbo\Stored Procedures\CreateResult.sql" />
+    <Build Include="dbo\Stored Procedures\CreateResponse.sql" />
+    <Build Include="dbo\Stored Procedures\CreateRequester.sql" />
+    <Build Include="dbo\Stored Procedures\CreatePosition.sql" />
+    <Build Include="dbo\Stored Procedures\CreateLocation.sql" />
+    <Build Include="dbo\Stored Procedures\CreateInterview.sql" />
+    <Build Include="dbo\Stored Procedures\CreateContact.sql" />
+    <Build Include="dbo\Stored Procedures\CreateCompany.sql" />
+    <Build Include="dbo\Stored Procedures\CreateApplicationType.sql" />
+    <Build Include="dbo\Stored Procedures\CreateApplication.sql" />
+    <Build Include="dbo\Tables\ContactTypes.sql" />
+    <Build Include="dbo\Tables\InterviewTypes.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateInterviewType.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateContactType.sql" />
+    <Build Include="dbo\Stored Procedures\GetInterviewTypes.sql" />
+    <Build Include="dbo\Stored Procedures\GetContactTypes.sql" />
+    <Build Include="dbo\Stored Procedures\CreateInterviewType.sql" />
+    <Build Include="dbo\Stored Procedures\CreateContactType.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlSchemaCompare.scmp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutNarrow.cshtml";
+}
+
+<style>
+
+    .column {
+        float: left;
+        width: 250px;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        background: #3db5da;
+        border-radius: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h3 {
+        color: #5caac1;
+    }
+</style>
+
+
+<div id="boxes">
+    <h3>What would you like to create?</h3>
+    <div class="row">
+        <a href=@Url.Action("Create", "Application")>
+            <div class="column">
+                <h2>Application</h2>
+                Add a new job application
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "ApplicationType")>
+            <div class="column">
+                <h2>Application Type</h2>
+                Add a new application type
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Company")>
+            <div class="column">
+                <h2>Company</h2>
+                Add a new company
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Contact")>
+            <div class="column">
+                <h2>Contact</h2>
+                Add a new contact
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "ContactType")>
+            <div class="column">
+                <h2>Contact Type</h2>
+                Add a new contact type
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "InterviewType")>
+            <div class="column">
+                <h2>Interview Type</h2>
+                Add a new interview type
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Location")>
+            <div class="column">
+                <h2>Location</h2>
+                Add a new location
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Position")>
+            <div class="column">
+                <h2>Position</h2>
+                Add a new position
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "PositionType")>
+            <div class="column">
+                <h2>Position Type</h2>
+                Add a new position type
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "Requester")>
+            <div class="column">
+                <h2>Requester</h2>
+                Add a new requester for a job
+            </div>
+        </a>
+
+        <a href=@Url.Action("Create", "ResponseType")>
+            <div class="column">
+                <h2>Response Type</h2>
+                Add a new response type
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Views";
+    Layout = "~/Views/Shared/_LayoutNarrow.cshtml";
+}
+
+<style>
+
+    .column {
+        float: left;
+        width: 255px;
+        color: #fff;
+        padding: 10px;
+        margin: 10px;
+        background: #3db5da;
+        border-radius: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    h3 {
+        color: #5caac1;
+    }
+</style>
+
+
+<div id="boxes">
+    <h3>What would you like to view?</h3>
+    <div class="row">
+        <a href=@Url.Action("Search", "Application")>
+            <div class="column">
+                <h2>Applications</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "ApplicationType")>
+            <div class="column">
+                <h2>Application Types</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Company")>
+            <div class="column">
+                <h2>Companies</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Contact")>
+            <div class="column">
+                <h2>Contacts</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "ContactType")>
+            <div class="column">
+                <h2>Contact Types</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "InterviewType")>
+            <div class="column">
+                <h2>Interview Types</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Location")>
+            <div class="column">
+                <h2>Locations</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Position")>
+            <div class="column">
+                <h2>Positions</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "PositionType")>
+            <div class="column">
+                <h2>Position Types</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "Requester")>
+            <div class="column">
+                <h2>Requesters</h2>
+            </div>
+        </a>
+
+        <a href=@Url.Action("Index", "ResponseType")>
+            <div class="column">
+                <h2>Response Types</h2>
+            </div>
+        </a>
+    </div>
+</div>
