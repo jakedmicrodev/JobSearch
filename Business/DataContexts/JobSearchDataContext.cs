@@ -272,7 +272,7 @@ namespace Business.DataContexts
         {
             var parameters = new DynamicParameters();
 
-            parameters.Add("@ApplicationId", v.ResponseTypeId, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@ApplicationId", v.ApplicationId, DbType.Int32, ParameterDirection.Input);
             parameters.Add("@ResponseTypeId", v.ResponseTypeId, DbType.Int32, ParameterDirection.Input);
             parameters.Add("@ResponseDate", v.ResponseDate, DbType.DateTime, ParameterDirection.Input);
             parameters.Add("@ResultId", v.ResultId, DbType.Int32, ParameterDirection.Input);

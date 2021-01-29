@@ -25,6 +25,7 @@ namespace UI.Controllers
         public ActionResult Create()
         {
             Response a = new JobSearchService().GetResponse();
+            a.ApplicationId = (int)TempData["ApplicationId"];
             return View(a);
         }
 
